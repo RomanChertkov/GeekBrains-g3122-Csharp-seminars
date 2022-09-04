@@ -7,7 +7,7 @@
 
 Console.Clear();
 Console.WriteLine(
-    "Программа принимает на вход цифру, обозначающую день недели, "+
+    "Программа принимает на вход цифру, обозначающую день недели, " +
     "и проверяет, является ли этот день выходным.\n"
 );
 
@@ -31,23 +31,24 @@ CalculateData();
 PrintData();
 
 // Считывает число от пользователя
-void ReadData () {
+void ReadData()
+{
     Console.Write("Введите число: ");
-    dayNumber = int.Parse( Console.ReadLine() ?? "" );
+    dayNumber = int.Parse(Console.ReadLine() ?? "");
 }
 
 // Проверка на выходной день
-void CalculateData(){
-    if (dayNumber >= 1 && dayNumber <= 7){
-        result = daysOfWeek[dayNumber];
-        checkNumber = true;
-    }
+void CalculateData()
+{
+    checkNumber = daysOfWeek.ContainsKey(dayNumber);
+    if (checkNumber) result = daysOfWeek[dayNumber];
 }
 
 //Выводит результат в консоль
-void PrintData(){
+void PrintData()
+{
     Console.WriteLine(
-        (checkNumber) 
+        (checkNumber)
             ? result
             : "Такого дня нет. В неделе 7 дней."
     );
