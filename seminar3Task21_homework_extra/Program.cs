@@ -25,7 +25,7 @@ int[] pointB = PointCoordinates(coordinates[1]);
 PrintResultToConsole(
    "Расстояние между точками " +
    $"А({pointA[0]},{pointA[1]},{pointA[2]}) и " +
-   $"B({pointB[0]},{pointB[1]},{pointA[2]}) " +
+   $"B({pointB[0]},{pointB[1]},{pointB[2]}) " +
    $"в 3D пространстве = {DistanceBetween2Points(pointA, pointB)}"
 );
 
