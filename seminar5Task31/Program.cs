@@ -94,7 +94,6 @@ int ValidateRangeEnd(int startRange, int endRange)
 }
 
 
-
 //Метод зпрашивает у пользователя разрешение на выход или продолжение
 void ContinueProgram()
 {
