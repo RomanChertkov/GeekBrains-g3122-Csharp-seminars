@@ -28,7 +28,12 @@ while (!endApp)
     int startRange =
         ValidateIntNumber(ReadStringFromConsole("Введите начало диапазона : "));
     int endRange =
-        ValidateIntNumber(ReadStringFromConsole("Введите конец диапазона: "));
+        ValidateRangeEnd(
+            startRange,
+            ValidateIntNumber(
+                ReadStringFromConsole("Введите конец диапазона: ")
+            )
+    );
 
     Console.WriteLine();
 
@@ -55,8 +60,8 @@ int[,] GenerateRandomMatrix(
     {
         for (int j = 0; j < matrixSize.columns; j++)
         {
-            matrix[i, j] =
-                new Random().Next(valuesRange.rangeStart, valuesRange.rangeEnd);
+            matrix[i, j] = new Random()
+                    .Next(valuesRange.rangeStart, valuesRange.rangeEnd + 1);
         }
     }
     return matrix;
@@ -104,6 +109,29 @@ int ValidateIntNumber(string number)
 
     return cleanNumber;
 
+}
+
+
+//валидация диапазона
+int ValidateRangeEnd(int startRange, int endRange)
+{
+
+    while (startRange > endRange)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine(
+            "Ошибка! " +
+            $"Конец диапазона должен быть больше начала ( > {startRange}).\n"
+        );
+
+        Console.ResetColor();
+        Console.Write("Введите конец диапазона ещё раз: ");
+
+        endRange =
+            ValidateIntNumber(ReadStringFromConsole(""));
+        Console.ResetColor();
+    }
+    return endRange;
 }
 
 
