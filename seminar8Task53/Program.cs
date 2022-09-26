@@ -46,11 +46,6 @@ while (!endApp)
 
     PrintMatrix(randomMatrix);
 
-    // PrintResultToConsole(
-    //     "среднее арифметическое элементов в каждом столбце:"
-    //     + $"{string.Join(' ', ColumnAverige(randomMatrix))}"
-    // );
-
     ContinueProgram();
 }
 
