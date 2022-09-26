@@ -236,14 +236,3 @@ string ReadStringFromConsole(string call2ActionText)
     Console.Write(call2ActionText);
     return (Console.ReadLine() ?? "").Trim();
 }
-
-//Вывод результата работы программы
-void PrintResultToConsole(string result)
-{
-    Console.ForegroundColor = ConsoleColor.DarkGreen;
-
-    Console.WriteLine();
-    Console.WriteLine(result);
-
-    Console.ResetColor();
-}
