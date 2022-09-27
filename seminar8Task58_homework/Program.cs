@@ -124,8 +124,6 @@ int[,] GenerateRandomMatrix(
 
     for (int i = 0; i < matrixSize.rows; i++)
     {
-        List<int> sortedRow = new List<int>();
-
         for (int j = 0; j < matrixSize.columns; j++)
         {
             matrix[i, j] = new Random()
