@@ -10,7 +10,7 @@ bool endApp = false;
 while (!endApp)
 {
     ProgramDescription(
-        "Программа принимает на вход число N выводит числа от 1 до N \n"
+        "Программа принимает на вход число N выводит числа от N до 1 \n"
     );
 
     int number =
