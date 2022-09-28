@@ -23,7 +23,7 @@ while (!endApp)
 }
 
 
-// Сусса чисел числа
+// Сумма цифр числа
 int DigitSum(int number)
 {
     if (number == 0) return 0;
