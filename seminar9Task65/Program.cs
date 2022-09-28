@@ -22,7 +22,7 @@ while (!endApp)
 }
 
 
-//числа от 1 до N 
+//числа от N до   1
 string GenerateLineRec(int number)
 {
     if (number == 1) return number + "";
